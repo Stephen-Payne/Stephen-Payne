@@ -75,7 +75,7 @@ h1 {
 }
 
 header img {
-  display: block;
+  display: inline-block;
   height: 60px;
   padding-top: 20.15px;
 }
