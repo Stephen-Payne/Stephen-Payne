@@ -60,7 +60,7 @@ p, li {
 }
 
 body > * {
-  background-color: red;
+  background-color: rgb(9, 255, 0);
   padding: 1%;
 }
 
@@ -139,4 +139,11 @@ nav a, nav span {
 .footer {
   background-color: rgba(0,255,0,0.5);
   margin-top: 10px;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
