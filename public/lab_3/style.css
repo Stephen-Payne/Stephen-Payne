@@ -17,13 +17,6 @@ body {
   background-color: #6091C3;
 }
 
-.flex-outer li,
-.flex-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 /* || typography */
 
 h1, h2, h3 {
@@ -67,7 +60,7 @@ p, li {
 }
 
 body > * {
-  background-color: rgb(9, 255, 0);
+  background-color: red;
   padding: 1%;
 }
 
@@ -147,4 +140,3 @@ nav a, nav span {
   background-color: rgba(0,255,0,0.5);
   margin-top: 10px;
 }
-
