@@ -17,6 +17,13 @@ body {
   background-color: #6091C3;
 }
 
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 /* || typography */
 
 h1, h2, h3 {
@@ -141,9 +148,3 @@ nav a, nav span {
   margin-top: 10px;
 }
 
-.flex-outer li,
-.flex-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
