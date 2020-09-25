@@ -60,7 +60,7 @@ html, body {
   }
   
   body > * {
-    background-color: red;
+    background-color: purple;
     padding: 1%;
   }
   
@@ -140,3 +140,10 @@ html, body {
     margin-top: 10px;
     background: rgba(0,255,0,0.5);
   }
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
