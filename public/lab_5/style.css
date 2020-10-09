@@ -14,7 +14,7 @@ html, body {
     width: 70%;
     min-width: 800px;
     margin: 0 auto;
-    background-color: rgb(51, 110, 219);
+    background-color: rgb(170, 4, 170);
   }
   
   /* || typography */
@@ -60,7 +60,6 @@ html, body {
   }
   
   body > * {
-    background-color: rgb(170, 4, 170);
     padding: 1%;
   }
   
