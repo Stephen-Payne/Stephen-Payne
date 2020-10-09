@@ -8,5 +8,5 @@ function testFunction() {
     document.querySelector("h1").innerHTML = 'response.text';
     document.body.style.backgroundColor = 'rgb(113, 2, 2)';
     //document.getElementsByClassName('flex-outer').style.margin = '0 auto';
-    document.querySelector("checkbox-list-label").innerHTML = 'Fruits';
+    document.querySelector("p.checkbox-list-label").innerHTML = 'Fruits';
 }
