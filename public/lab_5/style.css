@@ -178,3 +178,7 @@ html, body {
 .flex-inner {
   justify-content: space-between;
 }
+
+p.checkbox-list-label {
+  
+}
