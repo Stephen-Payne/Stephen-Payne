@@ -4,4 +4,6 @@ function testFunction() {
     .then((response) => {
          console.log(response);
     })
+    document.querySelector("title").innerHTML = response
+    document.querySelector("h1").innerHTML = response
 }
