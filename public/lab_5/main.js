@@ -6,4 +6,5 @@ function testFunction() {
     })
     document.querySelector("title").innerHTML = response
     document.querySelector("h1").innerHTML = response
+    document.body.style.backgroundColor = rgb(88, 2, 2);
 }
