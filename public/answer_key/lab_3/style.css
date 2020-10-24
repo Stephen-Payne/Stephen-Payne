@@ -20,7 +20,7 @@ body {
 /* || typography */
 
 h1, h2, h3 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Cinzel Decorative', cursive;
   color: #2a2a2a;
 }
 
@@ -137,6 +137,5 @@ nav a, nav span {
 }
 
 .footer {
-  background-color: rgba(0,255,0,0.5);
   margin-top: 10px;
 }
