@@ -45,6 +45,11 @@ document.body.addEventListener('submit', async (e) => {
         return fromServer(num);
       });
 
+      const reverse = arr2.sort((a, b) => sortFunction(a,b,'name'));
+      const ol = document.createElement('ol');
+      ol.className = 'flex-inner';
+      $('form').prepend(ol);
+
       console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
