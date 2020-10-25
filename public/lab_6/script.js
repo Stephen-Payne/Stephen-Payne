@@ -45,7 +45,7 @@ document.body.addEventListener('submit', async (e) => {
         return fromServer(num);
       });
 
-      reverse = arr2.sort((a, b) => sortFunction(a,b,'name'));
+      const reverse = arr2.sort((a, b) => sortFunction(a,b,'name'));
       const ol = document.createElement('ol');
       ol.className = '.flex-inner';
       $("form").prepend(ol);
