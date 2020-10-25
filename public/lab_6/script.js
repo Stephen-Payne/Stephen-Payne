@@ -40,7 +40,7 @@ document.body.addEventListener('submit', async (e) => {
         document.querySelector('.flex-inner').remove();
       }
       const arr1 = range(10);
-      const arr2 = arr.map(() => {
+      const arr2 = arr1.map(() => {
         const num = getRandomIntInclusive(0, 243);
         return fromServer(num);
       });
