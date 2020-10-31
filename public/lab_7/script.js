@@ -1,5 +1,20 @@
+function range(int) {
+  const arr = [];
+  for (let i = 0; i < int; i += 1) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive 
+}
+
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
+  
   return list;
 }
 
@@ -9,7 +24,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     animationEnabled: true,
     
     title:{
-      text:"Fortune 500 Companies by Country"
+      text:"Places To Eat Out In Future"
     },
     axisX:{
       interval: 1
@@ -17,7 +32,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     axisY2:{
       interlacedColor: "rgba(1,77,101,.2)",
       gridColor: "rgba(1,77,101,.1)",
-      title: "Number of Companies"
+      title: "Restaurants by Category"
     },
     data: [{
       type: "bar",
