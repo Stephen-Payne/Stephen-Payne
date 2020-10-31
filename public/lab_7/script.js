@@ -1,36 +1,3 @@
-function range(int) {
-  const arr = [];
-  for (let i = 0; i < int; i += 1) {
-    arr.push(i);
-  }
-  return arr;
-}
-
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive 
-}
-
-/*async function loadData(){
-  const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
-  const json = await data.json();
-
-  const normal = range(10);
-  const randomRestaurants = normal.map((m) => {
-    const which = getRandomIntInclusive(0, json.length);
-    const restaurant = json[which];
-    return restaurant;
-  });
-
-  console.table(randomRestaurants);
-
-  const div = document.createElement('div');
-  div.innerHTML = '<h2>What we have</h2> <br />${JSON.stringify(randomRestaurants[0])} <br /><br />';
-  $('body').append(div);
-
-}*/
-
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
   const list = restaurantList.reduce((collection, item, i) => {
@@ -100,7 +67,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     animationEnabled: true,
     colorSet: 'customColorSet1',
     title: {
-      text: 'Change This Title'
+      text: 'Places To Eat Out In Future'
     },
     axisX: {
       interval: 1,
@@ -109,7 +76,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     axisY2: {
       interlacedColor: 'rgba(1,77,101,.2)',
       gridColor: 'rgba(1,77,101,.1)',
-      title: 'Change This Title',
+      title: 'Restaurants by Category',
       labelFontSize: 12,
       scaleBreaks: {customBreaks: []} // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
     },
