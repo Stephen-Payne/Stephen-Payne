@@ -34,8 +34,17 @@ function getRandomIntInclusive(min, max) {
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
   const list = restaurantList.reduce((collection, item, i) => {
-    const findCat = collection.find((findItem) => findItem.Label === item.category);
-  });
+    const findCat = collection.find((findItem) => findItem.label === item.category);
+    if (!findCat) {
+      collection.push({
+        label: item.category,
+        y: 1
+      });
+    } else {
+      findCat.y += 1;
+    }
+    return collection
+  }, []);
   return list;
 }
 
