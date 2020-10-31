@@ -12,6 +12,20 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive 
 }
 
+async function loadData(){
+  const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+  const json = await data.json();
+
+  const normal = range(10);
+  const randomRestaurants = normal.map(() => {
+    const which = getRandomIntInclusive(0, json.length);
+    const restaurant = json[which];
+    return restaurant;
+  });
+
+  
+}
+
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
   
