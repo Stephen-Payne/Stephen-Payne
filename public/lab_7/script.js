@@ -17,13 +17,18 @@ async function loadData(){
   const json = await data.json();
 
   const normal = range(10);
-  const randomRestaurants = normal.map(() => {
+  const randomRestaurants = normal.map((m) => {
     const which = getRandomIntInclusive(0, json.length);
     const restaurant = json[which];
     return restaurant;
   });
 
-  
+  console.table(randomRestaurants);
+
+  const div = document.createElement('div');
+  div.innerHTML = '<h2>What we have</h2> <br />${JSON.stringify(randomRestaurants[0])} <br /><br />';
+  $('body').append(div);
+
 }
 
 function convertRestaurantsToCategories(restaurantList) {
