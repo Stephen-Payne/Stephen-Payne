@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 import sqlite3 from 'sqlite3';
 import {open} from 'sqlite';
-const sqlite3 = require('sqlite3').verbose();
+//const sqlite3 = require('sqlite3').verbose();
 
 const dbSettings = {
   filename: './tmp/database.db',
@@ -17,6 +17,11 @@ let db;
 
 async function databaseInitialize(dbSettings) {
   db = await open(dbSettings);
+
+  //CREATE TABLE IF NOT EXISTS food(
+
+  //);
+
   console.log('Connected to ' + db);
 }
 
