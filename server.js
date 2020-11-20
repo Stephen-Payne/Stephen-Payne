@@ -6,6 +6,11 @@ import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 const sqlite3 = require('sqlite3').verbose();
 
+const dbSettings = {
+  filename: './tmp/database.db',
+  driver: sqlite3.Database,
+};
+
 
 dotenv.config();
 
