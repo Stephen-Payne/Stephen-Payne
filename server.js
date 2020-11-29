@@ -49,9 +49,18 @@ async function foodDataFetcher() {
   return json;
 }
 
-async function dataInput() {
+async function dataInput(foodData) {
   try {
-
+    const name = foodData.name;
+    const category = foodData.category;
+    const date = foodData.inspection_date;
+    const results = foodData.inspection_results;
+    const city = foodData.city;
+    const state = foodData.state;
+    const zip = foodData.zip;
+    const owner = foodData.owner;
+    const type = foodData.type;
+    
   }
   catch(e) {
     console.log('Insert Error');
