@@ -30,7 +30,7 @@ async function databaseInitialize(dbSettings) {
       owner TEXT,
       type TEXT
     )
-    `)
+    `);
 
     const data = await foodDataFetcher();
     data.forEach((entry) => {dataInput(entry)});
