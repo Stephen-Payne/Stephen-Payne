@@ -18,15 +18,15 @@ let db;
 async function databaseInitialize(dbSettings) {
   try {
     const db = await open(dbSettings);
+    await db.exec(`CREATE TABLE IF NOT EXISTS food (
+
+    )
+    `)
     console.log('Connected to ' + db);
   }
   catch(e) {
     console.log("Error")
   }
-
-  //CREATE TABLE IF NOT EXISTS food(
-
-  //);
 
   
 }
@@ -62,8 +62,9 @@ app.route('/api')
     res.json(json);
   });
 
+await databaseInitialize(dbSettings);
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
 
-await databaseInitialize(dbSettings);
