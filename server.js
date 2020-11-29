@@ -31,7 +31,8 @@ async function databaseInitialize(dbSettings) {
       type TEXT
     )
     `)
-    console.log('Connected to ' + db);
+    const test = await db.get("SELECT * FROM food")
+    console.log(test);
   }
   catch(e) {
     console.log("Error")
