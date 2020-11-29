@@ -1,20 +1,3 @@
-function convertRestaurantsToCategories(restaurantList) {
-  // process your restaurants here!
-  const list = restaurantList.reduce((collection, item, i) => {
-    const findCat = collection.find((findItem) => findItem.label === item.category);
-    if (!findCat) {
-      collection.push({
-        label: item.category,
-        y: 1
-      });
-    } else {
-      findCat.y += 1;
-    }
-    return collection
-  }, []);
-  return list;
-}
-
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
   // set your chart configuration here!
   CanvasJS.addColorSet('customColorSet1', [
@@ -74,7 +57,7 @@ function runThisWithResultsFromServer(jsonFromServer) {
   // Process your restaurants list
   // Make a configuration object for your chart
   // Instantiate your chart
-  const reorganizedData = convertRestaurantsToCategories(jsonFromServer);
+  const reorganizedData = jsonFromServer;
   const options = makeYourOptionsObject(reorganizedData);
   const chart = new CanvasJS.Chart('chartContainer', options);
   chart.render();
@@ -84,7 +67,7 @@ function runThisWithResultsFromServer(jsonFromServer) {
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray();
-  fetch('/api', {
+  fetch('/sql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
