@@ -31,6 +31,9 @@ async function databaseInitialize(dbSettings) {
       type TEXT
     )
     `)
+
+    const data = await foodDataFetcher();
+
     const test = await db.get("SELECT * FROM food")
     console.log(test);
   }
@@ -43,8 +46,17 @@ async function databaseInitialize(dbSettings) {
 async function foodDataFetcher() {
   const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
   const json = await data.json();
+  return json;
 }
 
+async function dataInput() {
+  try {
+
+  }
+  catch(e) {
+    console.log('Insert Error');
+  }
+}
 
 dotenv.config();
 
