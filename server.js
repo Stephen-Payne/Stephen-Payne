@@ -60,7 +60,12 @@ async function dataInput(foodData) {
     const zip = foodData.zip;
     const owner = foodData.owner;
     const type = foodData.type;
-    
+
+    await db.exec(`INSERT INTO food (
+      name, category, inspection_date, inspection_results, city, state, zip, owner, type)
+      VALUES
+      ("${name}", "${category}", "${date}", "${results}", "${city}", "${state}", "${zip}", "${owner}", "${type}")
+    `)
   }
   catch(e) {
     console.log('Insert Error');
