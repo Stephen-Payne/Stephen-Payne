@@ -74,6 +74,13 @@ async function dataInput(foodData) {
   }
 }
 
+async function databaseRetriever(db) {
+  const result = await db.all(`SELECT category, COUNT(name) FROM food GROUP BY category`);
+  return result;
+}
+
+await databaseInitialize(dbSettings);
+
 dotenv.config();
 
 const app = express();
@@ -112,12 +119,12 @@ app.route('/sql')
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
 
+    const db = await open(dbSettings);
+    const out = await databaseRetriever(db);
     
     console.log('data from fetch', json);
-    res.json(json);
+    res.json(out);
   });
-
-await databaseInitialize(dbSettings);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
