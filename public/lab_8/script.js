@@ -57,8 +57,7 @@ function runThisWithResultsFromServer(jsonFromServer) {
   // Process your restaurants list
   // Make a configuration object for your chart
   // Instantiate your chart
-  const reorganizedData = jsonFromServer;
-  const options = makeYourOptionsObject(reorganizedData);
+  const options = makeYourOptionsObject(jsonFromServer);
   const chart = new CanvasJS.Chart('chartContainer', options);
   chart.render();
 }
