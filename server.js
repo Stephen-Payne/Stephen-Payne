@@ -16,13 +16,19 @@ const dbSettings = {
 let db;
 
 async function databaseInitialize(dbSettings) {
-  db = await open(dbSettings);
+  try {
+    const db = await open(dbSettings);
+    console.log('Connected to ' + db);
+  }
+  catch(e) {
+    console.log("Error")
+  }
 
   //CREATE TABLE IF NOT EXISTS food(
 
   //);
 
-  console.log('Connected to ' + db);
+  
 }
 
 
