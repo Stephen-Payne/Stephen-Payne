@@ -19,7 +19,16 @@ async function databaseInitialize(dbSettings) {
   try {
     const db = await open(dbSettings);
     await db.exec(`CREATE TABLE IF NOT EXISTS food (
-
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT,
+      category TEXT,
+      inspection_date DATE,
+      inspection_results TEXT,
+      city TEXT,
+      state TEXT,
+      zip INTEGER,
+      owner TEXT,
+      type TEXT
     )
     `)
     console.log('Connected to ' + db);
@@ -27,8 +36,7 @@ async function databaseInitialize(dbSettings) {
   catch(e) {
     console.log("Error")
   }
-
-  
+ 
 }
 
 
