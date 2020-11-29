@@ -33,6 +33,7 @@ async function databaseInitialize(dbSettings) {
     `)
 
     const data = await foodDataFetcher();
+    data.forEach((entry) => {dataInput(entry)});
 
     const test = await db.get("SELECT * FROM food")
     console.log(test);
@@ -69,6 +70,7 @@ async function dataInput(foodData) {
   }
   catch(e) {
     console.log('Insert Error');
+    console.log(e);
   }
 }
 
